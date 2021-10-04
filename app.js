@@ -7,14 +7,14 @@ checkNumberButton.addEventListener("click", function checkBirthdateIsLucky() {
     const dob = dateOfBirth.value;
     const luckyNo = luckyNumber.value;
     const dobSum = calculateSum(dob);
-    if (dobSum && luckyNo) {
+    if (dobSum && luckyNo && luckyNo>0) {
         if (dobSum % luckyNo === 0) {
             outputBox.innerText = "Your birthday is lucky🎉";
         } else {
             outputBox.innerText = "Your birthday is not lucky😌";
         }
     } else {
-        outputBox.innerText = "Please enter both the fields👿";
+        outputBox.innerText = "Please enter both the fields in positive value👿";
     }
 })
 
